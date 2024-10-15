@@ -1,0 +1,71 @@
+.recipe-details-container {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el contenedor */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.recipe-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el título */
+}
+
+.recipe-image {
+    width: auto;
+    height: auto;
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 15px;
+}
+
+.ingredient-list {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Elimina el padding de la lista */
+}
+
+.ingredient-list li {
+    background: rgb(225, 225, 242);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+.instructions, .instructions li {
+    background: rgb(225, 225, 242);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones */
+    margin-top: 20px;
+}
+
+.favorite-button, .back-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favorite-button {
+    background-color: #28a745; /* Color verde */
+}
+
+.back-button {
+    background-color: #007bff; /* Color azul */
+}
+
+.favorite-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
