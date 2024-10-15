@@ -10,7 +10,7 @@ function RecipeSearch() {
   const [recipes, setRecipes] = useState(location.state?.recipes || []); // Estado para almacenar las recetas obtenidas de la API o recuperar recetas anteriores si las hay
   const [ingredients, setIngredients] = useState(location.state?.ingredients || ''); // Estado para almacenar los ingredientes ingresados por el usuario o recuperar ingredientes anteriores si los hay
 
-  const apiKey = '****************************'; // Clave de la API de Spoonacular
+  const apiKey = '********************************'; // Clave de la API de Spoonacular
 
   // Función para buscar recetas basadas en los ingredientes proporcionados
   const searchRecipes = () => {

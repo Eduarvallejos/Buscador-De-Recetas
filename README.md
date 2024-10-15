@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Buscador de Recetas 🍽️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto de una plataforma web que permite a los usuarios buscar recetas basadas en los ingredientes que tienen, ver los detalles de las recetas y guardarlas como favoritas. Utiliza la API de Spoonacular para obtener las recetas, React para la interfaz de usuario, y Firebase Authentication para la autenticación de usuarios.
 
-## Available Scripts
+## Información del Proyecto 📚
 
-In the project directory, you can run:
+Este proyecto es parte de mis prácticas de desarrollo de software, donde he aplicado mis habilidades en programación y diseño de aplicaciones web. A través de este proyecto, he trabajado en:
 
-### `npm start`
+- **Frontend**: React.js para la creación de la interfaz de usuario.
+- **Backend**: API de Spoonacular para la obtención de recetas.
+- **Autenticación**: Firebase Authentication para la gestión de usuarios.
+- **Almacenamiento local**: localStorage para guardar recetas favoritas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Características principales 📋
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔍 **Búsqueda de recetas**: Los usuarios pueden buscar recetas ingresando ingredientes y recibir una lista de recetas relevantes.
+- 📋 **Ver detalles de recetas**: Cada receta incluye detalles como ingredientes, instrucciones y una imagen representativa.
+- ⭐ **Guardado de recetas favoritas**: Los usuarios autenticados pueden guardar recetas como favoritas para verlas más tarde.
+- 🔑 **Autenticación**: Integración con Firebase Authentication para el registro e inicio de sesión de usuarios.
 
-### `npm test`
+## Tecnologías Utilizadas 🛠️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- Firebase
+- Axios
+- CSS
 
-### `npm run build`
+## Capturas de Pantalla 📸
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔎 Página de Búsqueda de Recetas
+![Search Recipes](./screenshots/screenshot_search.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📖 Detalles de la Receta
+![Recipe Details](./screenshots/screenshot_details.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ⭐ Página de Favoritos
+![Favorites Page](./screenshots/screenshot_favorites.png)
 
-### `npm run eject`
+## Instalación y configuración 🚀
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clona el repositorio:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+``` bash
+git clone: https://github.com/Eduarvallejos/Buscador-De-Recetas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Instala las dependencias del proyecto:
 
-## Learn More
+``` bash
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Configura Firebase Authentication:
 
-### Code Splitting
+- Crea un proyecto en ``Firebase``.
+- Habilita el método de autenticación por correo electrónico y contraseña.
+- Agrega tu configuración de Firebase en un archivo ``firebase.js``.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Obtén una API key de ``Spoonacular`` y añádela en los archivos necesarios (``RecipeSearch.js`` y ``RecipeDetails.js``).
 
-### Analyzing the Bundle Size
+5. Inicia el proyecto en modo de desarrollo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+``` bash
+npm start
 
-### Making a Progressive Web App
+```
+El proyecto estará disponible en ``http://localhost:3000``.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Estructura del proyecto 📂
 
-### Advanced Configuration
+``` bash
+/src
+ ├── /components
+ │    ├── RecipeSearch.js        # Componente de búsqueda de recetas
+ │    ├── RecipeDetails.js       # Componente de detalles de recetas
+ │    ├── RecipeList.js          # Componente que muestra la lista de recetas
+ │    ├── LogoutButton.js        # Componente que muestra el Boton de cerrar sesión
+ │    └── FavoritesPage.js       # Página de recetas favoritas
+ ├── /firebase
+ │    └── firebase.js            # Configuración de Firebase
+ ├── App.js                      # Componente principal
+ ├── index.js                    # Punto de entrada de la aplicación
+ └── App.css                     # Estilos generales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+## Uso del proyecto 🎮
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Buscar recetas**: En la página principal, ingresa ingredientes en el campo de búsqueda y haz clic en "Buscar".
+2. **Ver detalles de la receta**: Haz clic en "Ver Receta" para obtener más detalles, como los ingredientes y las instrucciones.
+3. **Guardar recetas favoritas**: Inicia sesión o regístrate para guardar recetas como favoritas y visualizarlas en la sección de "Favoritos".
 
-### `npm run build` fails to minify
+## Futuras mejoras 🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Migración de la funcionalidad de recetas favoritas a una base de datos en lugar de localStorage.
+
+## Licencia 📜
+Este proyecto está bajo la licencia MIT. Puedes ver más detalles en el archivo ``LICENSE``.

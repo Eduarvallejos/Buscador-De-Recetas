@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase/firebase';
-import { signOut } from "../firebase/firebase/auth";
+import { signOut } from "firebase/auth";
 import './ProtectedLayout.css';
 
 function ProtectedLayout({children}) {

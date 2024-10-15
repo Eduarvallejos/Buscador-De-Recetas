@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { auth } from './firebase';
+import { auth } from '../firebase/firebase';
 import './RecipeDetails.css'; // Importa los estilos CSS
 
 function RecipeDetails() {
@@ -10,7 +10,7 @@ function RecipeDetails() {
   const [userUid, setUserUid] = useState(null) // Estado para almacenar el UID del usuario autenticado
   const navigate = useNavigate(); // Hook de navegación para redireccionar a otras páginas
   const location = useLocation(); // Hook para obtener el estado pasado por navigate
-  const apiKey = '***********************************'; // Clave de la API de Spoonacular
+  const apiKey = '*****************************'; // Clave de la API de Spoonacular
 
   // useEffect para obtener el usuario actual y su UID de Firebase Authentication
   useEffect(() =>{

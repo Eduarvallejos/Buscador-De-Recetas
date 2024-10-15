@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation} from "react-router-dom";
-import { auth } from "./firebase";
+import { auth } from "../firebase/firebase";
 import './FavoritesPage.css'; // Importa los estilos CSS
 
 function FavoritesPage() {
